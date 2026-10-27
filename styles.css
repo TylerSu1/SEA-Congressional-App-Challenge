@@ -1,0 +1,461 @@
+* {
+  --primary-color: #0b5a8e;
+  --secondary-color: #f1fafc;
+  --background-color: #cfeef5;
+  --border-color: #0b5a8e;
+  --deep: #073b5e;
+  --ocean: #0a5f8f;
+  --teal: #1597a8;
+  --aqua: #7fdcf0;
+  --foam: #e9fbff;
+  --shadow: rgba(0, 0, 0, 0.085);
+  --border-width: 0.55rem;
+
+  margin: 0px;
+  color: var(--primary-color);
+  user-select: none;
+  font-family: serif;
+}
+
+html {
+  scrollbar-color: var(--teal) var(--background-color);
+  scrollbar-width: auto;
+}
+
+body {
+  display: grid;
+  background-color: var(--background-color);
+}
+
+#sidebar1 {
+  padding-top: 4rem;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  height: 9vh;
+  width: 100%;
+  background-color: var(--secondary-color);
+  box-shadow: 0px 1.5vh 1.5vh var(--shadow);
+  border-bottom: var(--border-width) solid var(--border-color);
+  z-index: 2;
+
+  h1 {
+    font-size: 4.5vh;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  height: 9vh;
+  width: 100%;
+  background-color: var(--secondary-color);
+  box-shadow: 0px -1.5vh 1.5vh var(--shadow);
+  border-top: var(--border-width) solid var(--border-color);
+  z-index: 2;
+  transition: transform 0.2s ease-out;
+  h1 {
+    font-size: 4.5vh;
+  }
+}
+
+footer.hidden {
+  transform: translateY(100%);
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#name {
+  position: fixed;
+  top: 2vh;
+  left: 2vh;
+}
+
+#logoc {
+  filter: brightness(1.5);
+}
+
+#logoa {
+  filter: brightness(1.9);
+}
+
+#content {
+  margin-top: 12vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12vh;
+}
+
+#tips {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vh;
+  margin: 2vh auto 0;
+  width: 45%;
+}
+
+#tiptext {
+  font-size: 2.5vh;
+}
+
+#tiptext:hover {
+  filter: brightness(1.25);
+  cursor: pointer;
+  transform: translateY(-0.2vh);
+}
+
+.heading {
+  justify-self: start;
+  margin-top: 1vh;
+  margin-left: 2vh;
+  margin-bottom: 1vh;
+}
+
+.heading:hover {
+  filter: brightness(1.25);
+  cursor: pointer;
+  transform: translateY(-0.2vh);
+}
+
+.lessonstyle {
+  background-color: var(--secondary-color);
+  width: 40vw;
+  min-height: 25vh;
+  padding-bottom: 1.5vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 8px;
+  border: var(--border-width) solid var(--border-color);
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  box-shadow: 0px 2vh 1.5vh var(--shadow);
+  overflow: hidden;
+}
+
+.cardtitle {
+  font-weight: bold;
+}
+
+.text {
+  text-align: left;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+#otherinfo {
+  position: fixed;
+  background-color: var(--secondary-color);
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 20vw;
+  border-left: var(--border-width) solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15vh;
+}
+
+#bio {
+  position: fixed;
+  bottom: 2vh;
+  left: 2vh;
+}
+
+#streak {
+  position: fixed;
+  bottom: 2vh;
+  right: 2vh;
+}
+
+#sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 25vw;
+  height: 100vh;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transform: translateX(-100%);
+  transition: transform 0.2s ease-out;
+  z-index: 1;
+  border-right: var(--border-width) solid var(--border-color);
+  padding-top: 20vh;
+  overflow: hidden;
+
+  h1 {
+    margin-left: 2vw;
+    font-size: clamp(1.5rem, 2.8vw, 3rem);
+    margin-top: .5vw;
+  }
+}
+
+#sidebar.open {
+  transform: translateX(0);
+  box-shadow: 0 0 0 150vw var(--shadow);
+}
+
+#leftbarButton1 {
+  width: 5.5vh;
+  height: 5.5vh;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px;
+  position: fixed;
+  top: 13.5vh;
+  left: 3vh;
+}
+
+#leftbarButton2 {
+  width: 5.5vh;
+  height: 5.5vh;
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px;
+  position: fixed;
+  top: 13.5vh;
+  left: 3vh;
+}
+
+.hamburger {
+  width: 6.5vh;
+  height: 6.5vh;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 5px;
+}
+
+.hamburger:hover {
+  transform: translateY(-0.2vh);
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+
+.sidebarclick:hover {
+  filter: brightness(1.25);
+  cursor: pointer;
+  transform: translateY(-0.2vh);
+}
+
+@media (max-width: 700px) {
+  .lessonstyle {
+    width: 88vw;
+  }
+}
+
+/* =========================================================
+   SEA THEME: deep-water header/footer, sea-foam page,
+   drifting waves, wave-edged cards. Colors come from the
+   variables at the top of this file.
+   ========================================================= */
+
+/* ---- Page: sea-foam water with two slow layers of waves behind everything ---- */
+body {
+  background: linear-gradient(180deg, #e3f7fb 0%, #bfe8f1 55%, #8dd0e0 100%) fixed;
+  min-height: 100vh;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 200%;
+  pointer-events: none;
+  z-index: -1;
+  background-repeat: repeat-x;
+  background-position: bottom left;
+}
+
+body::before {
+  height: 22vh;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 20' preserveAspectRatio='none'%3E%3Cpath d='M0 10Q30 0 60 10T120 10V20H0Z' fill='%23ffffff' fill-opacity='.35'/%3E%3C/svg%3E");
+  background-size: 25vw 100%;
+  animation: sea-drift 48s linear infinite;
+}
+
+body::after {
+  height: 15vh;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 20' preserveAspectRatio='none'%3E%3Cpath d='M0 10Q30 20 60 10T120 10V20H0Z' fill='%231597a8' fill-opacity='.22'/%3E%3C/svg%3E");
+  background-size: 20vw 100%;
+  animation: sea-drift 32s linear infinite reverse;
+}
+
+@keyframes sea-drift {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ---- Header: deep water with a wavy lower edge ---- */
+header {
+  background: linear-gradient(180deg, var(--deep) 0%, var(--ocean) 100%);
+  border-bottom: 0;
+  box-shadow: none;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 20px;
+  pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 20' preserveAspectRatio='none'%3E%3Cpath d='M0 0H120V10Q90 20 60 10Q30 0 0 10Z' fill='%230a5f8f'/%3E%3C/svg%3E") repeat-x;
+  background-size: 120px 20px;
+  filter: drop-shadow(0 6px 5px rgba(7, 59, 94, 0.25));
+  animation: wave-slide 7s linear infinite;
+}
+
+@keyframes wave-slide {
+  from { background-position-x: 0; }
+  to   { background-position-x: 120px; }
+}
+
+header * {
+  color: var(--foam);
+}
+
+#name a {
+  color: #ffffff;
+  letter-spacing: 0.08em;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#logoc {
+  color: var(--aqua);
+  filter: none;
+}
+
+#logoa {
+  color: #c9f7ff;
+  filter: none;
+}
+
+#tiptext:hover {
+  filter: none;
+  color: var(--aqua);
+}
+
+/* ---- Footer: mirror of the header, waves along the top ---- */
+footer {
+  background: linear-gradient(0deg, var(--deep) 0%, var(--ocean) 100%);
+  border-top: 0;
+  box-shadow: none;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  height: 20px;
+  pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 20' preserveAspectRatio='none'%3E%3Cpath d='M0 10Q30 0 60 10T120 10V20H0Z' fill='%230a5f8f'/%3E%3C/svg%3E") repeat-x;
+  background-size: 120px 20px;
+  filter: drop-shadow(0 -6px 5px rgba(7, 59, 94, 0.2));
+  animation: wave-slide 9s linear infinite reverse;
+}
+
+footer.hidden::before {
+  visibility: hidden;
+}
+
+footer * {
+  color: var(--foam);
+}
+
+footer a:hover {
+  color: var(--aqua);
+}
+
+/* ---- Sidebar: ocean depths ---- */
+#sidebar {
+  background: linear-gradient(180deg, var(--deep) 0%, var(--ocean) 70%, var(--teal) 100%);
+  border-right: var(--border-width) solid var(--aqua);
+}
+
+#sidebar * {
+  color: var(--foam);
+}
+
+#sidebar .sidebarclick:hover a {
+  color: var(--aqua);
+}
+
+#sidebar .hamburger {
+  filter: invert(1);
+}
+
+/* ---- Cards: foam-white with a wave along the bottom ---- */
+.lessonstyle {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 20' preserveAspectRatio='none'%3E%3Cpath d='M0 10Q30 0 60 10T120 10V20H0Z' fill='%231597a8' fill-opacity='.28'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: bottom left;
+  background-size: 120px 14px;
+  padding-bottom: 2.4vh;
+  border-radius: 14px;
+  box-shadow: 0 1.6vh 2vh rgba(7, 59, 94, 0.18);
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.lessonstyle:hover {
+  transform: translateY(-0.5vh);
+  box-shadow: 0 2.2vh 2.6vh rgba(7, 59, 94, 0.26);
+}
+
+.heading {
+  color: var(--deep);
+}
+
+.heading a {
+  color: var(--deep);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after,
+  header::after,
+  footer::before {
+    animation: none;
+  }
+}
+
+/* ---- Completed units: light-blue card + check mark (so color is not the only cue) ---- */
+.lessonstyle.completed {
+  background-color: #bcdcf8;
+  border-color: var(--deep);
+}
+
+.lessonstyle.completed .heading a::after {
+  /* 6-digit escapes on purpose: a shorter one would swallow the "C" of "Completed" as a hex digit */
+  content: "\0000a0\0000a0\002713\0000a0Completed";
+  font-size: 1.1rem;
+  font-weight: normal;
+  vertical-align: middle;
+  color: var(--deep);
+}

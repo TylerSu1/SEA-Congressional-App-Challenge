@@ -1,0 +1,11 @@
+.biocontent {
+    background-color: rgba(0, 0, 0, 0);
+    width: 75vw;
+    height: 400vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}

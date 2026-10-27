@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SEA</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="name"><a href="index.html">S<span id="logoc">E</span><span id="logoa">A</span></a></h1>
+      <div id="tips">
+        <p id="tiptext">tip: avoid scams!!!!</p>
+      </div>
+    </header>
+    <div id="sidebar">
+      <button id="leftbarButton2">
+        <img class="hamburger" src="hamburger.png" draggable="false" />
+      </button>
+      <h1 class="sidebarclick" id="sidebar1"><a href="index.html">Home</a></h1>
+      <h1 class="sidebarclick"><a href="bio.html">About Us</a></h1>
+      <h1 class="sidebarclick"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfsCd_lnQBXbRvQrdq5tsc5vksUbzsqtGzRkqNp_zbd04GSPA/viewform" target="_blank" rel="noopener noreferrer">Report a Scam</a></h1>
+      <h1 class="sidebarclick"><a href="finaltest.html">Final Test</a></h1>
+    </div>
+    <div id="content">
+      <button id="leftbarButton1">
+        <img class="hamburger" src="hamburger.png" draggable="false" />
+      </button>
+      <div id="lessons"></div>
+      <!-- <div id="otherinfo">
+        <h1>Other info</h1>
+        <p>i hate scams!</p>
+      </div> -->
+    </div>
+    <footer>
+      <h1 id="bio"><a href="bio.html">About Us</a></h1>
+      <!-- <h1 id="streak">0 Streak 🔥</h1> -->
+      <h1 id="streak"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfsCd_lnQBXbRvQrdq5tsc5vksUbzsqtGzRkqNp_zbd04GSPA/viewform" target="_blank" rel="noopener noreferrer">Report a Scam</a></h1>
+    </footer>
+    <script>
+      const tiptext = document.getElementById("tiptext");
+
+      const tips = [
+        "Stop communicating with the scammer as soon as you realize something is wrong.",
+        "Do not send the scammer any more money or personal information.",
+        "Change your passwords if you shared your login information.",
+        "Contact your bank immediately if you sent money to a scammer.",
+        "Save screenshots and other evidence of the scam.",
+        "Tell a trusted adult if you are unsure what to do after being scammed.",
+        "Monitor your bank accounts for suspicious activity after a scam.",
+        "Do not feel embarrassed about reporting a scam.",
+        "Phishing scams often pretend to be legitimate organizations.",
+        "Text scams may use urgent messages to make you click a link.",
+        "Phone scammers may pretend to be banks or government agencies.",
+        "Email scams can use fake warnings to steal your information.",
+        "Social media scammers may create fake accounts to impersonate people you know.",
+        "Website scams can imitate legitimate stores to steal your money.",
+        "In-person scammers may use convincing stories to ask for money.",
+        "Fake delivery messages may ask you to pay a fee for a package.",
+        "Romance scams may build trust before asking you for money.",
+        "Investment scams may promise unusually high returns with little risk.",
+        "Job scams may ask you to pay money before giving you a job.",
+        "Charity scams may use fake causes to collect donations.",
+        "Tech support scams may falsely claim that your computer has a problem.",
+        "Fake prize scams may say you won something you never entered to win.",
+        "Government impersonation scams may threaten you with legal consequences.",
+        "Report scams to the appropriate government agency or platform.",
+        "Contact your bank if a scam involved your bank account.",
+        "Report suspicious messages through your phone's reporting features.",
+        "Report fake social media accounts to the platform hosting them.",
+        "Keep evidence of the scam when making a report.",
+        "Include phone numbers and usernames when reporting a scam.",
+        "Tell others about a scam so they can avoid it too.",
+        "Do not delete important evidence before reporting a scam.",
+        "Notify the real organization if someone is impersonating it.",
+        "Be cautious when a message creates a strong sense of urgency.",
+        "Be suspicious of unexpected requests for passwords or verification codes.",
+        "Never trust unexpected requests to pay with gift cards.",
+        "Be cautious when someone asks you to use cryptocurrency for payment.",
+        "Be suspicious of offers that seem too good to be true.",
+        "Check the sender's email address carefully.",
+        "Avoid clicking unexpected links before verifying them.",
+        "Be cautious when someone asks you to keep a transaction secret.",
+        "Scammers may use threats to pressure you into acting quickly.",
+        "Professional-looking messages can still be scams.",
+        "Do not assume a website is legitimate just because it looks professional.",
+        "Verify unexpected requests through an official website.",
+        "Be suspicious when someone asks for information they should already have.",
+        "Take a moment to think before responding to an unexpected request.",
+        "Do not let urgency prevent you from checking whether a message is legitimate.",
+        "Never share a verification code with someone who contacted you unexpectedly.",
+        "Check a company's contact information independently before calling.",
+        "If something seems suspicious, stop and verify it before taking action."
+      ];
+
+      function cycleTips() {
+        console.log("clicked");
+        tiptext.textContent = tips[Math.floor(Math.random() * tips.length)];
+      }
+
+      cycleTips();
+
+      tiptext.addEventListener("click", () => {
+        cycleTips();
+      });
+    </script>
+    <script src="sidebar.js"></script>
+    <script src="units.js"></script>
+    <script src="progress.js"></script>
+    <script src="cards.js"></script>
+  </body>
+</html>
